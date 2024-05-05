@@ -2,18 +2,15 @@ from random import choice
 import os
 from arte import logo
 
-
 def limparTerminal():
     # Verifica o sistema operacional e executa o comando apropriado para limpar o terminal
     os.system('cls' if os.name == 'nt' else 'clear')
-
-
+    
 def dealer():
     '''Retorna uma carta aleatória do baralho'''
     cartas = [11, 2, 3, 4, 8, 6, 7, 8, 9, 10, 10, 10, 10]
     carta = choice(cartas)
     return carta
-
 
 def calculaPontos(lista):
     """Pega uma lista de cartas e retorna uma pontuação da soma das cartas"""
@@ -23,7 +20,6 @@ def calculaPontos(lista):
         lista.remove(11)
         lista.append(1)
     return sum(lista)
-
 
 def compararMaos(pontosUsuario, pontosPc):
     """Compara as cartas do jogador e do computador retornando o resultado"""
@@ -41,7 +37,6 @@ def compararMaos(pontosUsuario, pontosPc):
         return "Vitória! Você possui mais pontos!"
     else:
         return (f"Derrota!")
-
 
 def jogar():
     """Inicializa o jogo"""
@@ -82,7 +77,6 @@ def jogar():
     print(f"mão final do computador: {
           cartasComputador}, Pontos finais do computador: {pontosDoComputador}")
     print(compararMaos(pontosDoJogador, pontosDoComputador))
-
 
 while input("Quer jogar? ('s'/'n'): ") == "s":
     limparTerminal()
