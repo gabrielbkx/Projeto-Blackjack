@@ -1,7 +1,3 @@
-from random import choice
-import os
-from arte import logo
-
 def limparTerminal():
     # Verifica o sistema operacional e executa o comando apropriado para limpar o terminal
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -73,8 +69,3 @@ def jogar():
     print(f"Sua mão final: {cartasjogador}, Seus pontos finais: {pontosDoJogador}")
     print(f"mão final do computador: {cartasComputador}, Pontos finais do computador: {pontosDoComputador}")
     print(compararMaos(pontosDoJogador,pontosDoComputador))
-
-while input("Quer jogar? ('s'/'n'): ") == "s":
-    limparTerminal()
-    jogar()
-        
