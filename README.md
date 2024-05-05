@@ -1,2 +1,2 @@
 # Projeto Blackjack
- Projeto destinado a praticar a  linguagem ate as funções com retono e sem
+ Projeto feito para treinar o uso de funções, posso dizer que eu estou aquecendo para a orientação a objetos.
